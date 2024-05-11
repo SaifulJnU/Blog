@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/saifuljnu/blog/internal/providers/routes"
 	"github.com/saifuljnu/blog/pkg/config"
 )
 
@@ -15,4 +16,8 @@ func Serve() {
 		log.Fatal("Error in routing")
 		return
 	}
+}
+
+func RegisterRoute() {
+	routes.RegisterRoutes(GetRouter())
 }
